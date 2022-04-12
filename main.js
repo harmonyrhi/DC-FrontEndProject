@@ -12,6 +12,7 @@
  * which is pre-loaded into the weather API no additional integtration 
  * */
 
+<<<<<<< Updated upstream
 const app = {
     init: () => {
         document
@@ -105,14 +106,64 @@ const app = {
         }).join(' '); // LINES 67 -  from the response, we pull the DAILY array of info, then map through it for the first 3 days, .join(' ') merges the strings together to create inner HTML
     },
 };
+=======
+>>>>>>> Stashed changes
 
-app.init() // starts weather app
+//  const app = {
+//     init: () => {
+//         document
+//             .getElementById(/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/)
+//             .addEventListener('click' , app.fetchWeather);
+//         document
+//             .getElementById(/**INSERT *ID TAG* FOR CURRENT WEATHER*/)
+//             .addEventListener('click' , app.getLocation);
+//     },
+//     fetchWeather: (ev) => {
+//         //use the values from latitude and longitude to fetch the weather
+//         let lat = document.getElementById('latitude').value;
+//         let lon = document.getElementById('longitude').value
+//         let key = '8386a687f2f5376a7e8ca545f6bbc2a7';
+//         let lang = 'en'; 
+//         let units = 'imperial'; // could use Standard(Kelvin), Metric, or Imperial
+//         let url = 'http://api.openweathermap.org/data/2.5/onecall?';
+//         //fetches weather information, following functions determine how it is used
+//     },
+//     getLocation: (ev) => {
+//         let opts = {
+//             enableHighAccuracy: true,
+//             timeout: 1000 * 10, // 10 seconds
+//             maximumAge: 1000 * 60 * 5, // 5 minutes
+//         };
+//         navigator.geolocation.getCurrentPosition(app.ftw, app.wtf, opts);
+//     },
+//     ftw: (position) => {
+//         //position aquired
+//         document.getElementById('latitude').value =
+//             position.coords.latitude.toFixed(2);
+//         document.getElementById('longitude').value=
+//             position.coords.longitude.toFixed(2);
+//     },
+//     wtf: (err) => {
+//         console.log('there was an error')
+//     },
+//     showWeather: (resp) => {
+//     },
+// };
 
+// app.init() // starts weather app
 
+const pageLoad = document.getElementByClass('.weather.row') 
+inner
 
+<<<<<<< Updated upstream
 //PUSHING WHAT I HAVE SO FAR, NOT FINISHED YET
 /**
  * https://www.youtube.com/watch?v=nGVoHEZojiQ
  *  - at 15:50 you see an example of ALL the returnable data 
  *    from the JSON file.
  */
+=======
+
+
+//PUSHING WHAT I HAVE SO FAR, NOT FINISHED YET
+>>>>>>> Stashed changes
