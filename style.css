@@ -18,7 +18,15 @@ body{
 .weather-box {
     display: grid;
     grid-template-columns: 750px 1fr ;
-    background-image: ();
+  
+    background: url(https://pixabay.com/get/g34e733be66bdf61cac4bd62db3398fc13f77c93785758cc18a4250150a1eef5cd25cb24836154dd04a691c0906cfce28.png) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    background-size: 75em;
+  /* width: 300px;
+  height: 300px; */
 }
 
 .CurrentWeather{
@@ -34,24 +42,52 @@ body{
 .City-temputure{
     display: flex;
     justify-content: center;
+    margin-top: 46%;
 }
 
 .City-temputure div{
-    margin: 3px;
+    display: block;
+    justify-content: center;
+}
+
+.CurrentDegrees{
+    color: white;
+    margin-right: 20px ;
+    font-size: 4em;
+}
+
+.Current-city-time div{
+   
+display: block;
 }
 
 
-.Attributes{
-    border: 2px solid red;
-}
+
 
 .time-date{
     display: flex;
     justify-content: center;
+    margin-left: 0px;
 }
 .time-date div{
-    margin: 3px;
+
 }
+
+.CurrentDegrees{
+
+}
+
+#Attributes{
+   background-color: rgb(8, 8, 8, 0.5 );
+   
+}
+
+#Attributes p{
+  color: white;
+  
+ }
+
+
 
 
 @media only screen 
