@@ -64,7 +64,7 @@ const app = {
         let row = document.querySelector('.weather.row') //.weather.row is the dummy "div class" info just to build the app, replace with dif class info where div will be placed
         //clear out old weather data and add new 
         //row.innerHTML = ''; //row.innerHTML clears out current HTML replaces it with data from api
-        row.innerHTML = Response.daily.map(day => {
+        row.innerHTML = Response.daily.map((day, index) => {
             return '<p>Day</>';
         }).join(' '); // LINES 67 -  from the response, we pull the DAILY array of info, then map through it for the first 3 days, .join(' ') merges the strings together to create inner HTML
     },
