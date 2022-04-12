@@ -1,0 +1,54 @@
+.weather-box{
+    width: 1200px !important;
+    height: 500px !important;
+   
+    margin-top: 10%;
+}
+
+p{
+    color: aqua;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-box {
+    display: grid;
+    grid-template-columns: 750px 1fr ;
+    background-image: ();
+}
+
+.CurrentWeather{
+    border: 2px solid blue;
+}
+
+.img-box{
+    background-color: black;
+    margin: 100px 100px 0px;
+    height: 200px;
+}
+
+.City-temputure{
+    display: flex;
+    justify-content: center;
+}
+
+.City-temputure div{
+    margin: 3px;
+}
+
+
+.Attributes{
+    border: 2px solid red;
+}
+
+.time-date{
+    display: flex;
+    justify-content: center;
+}
+.time-date div{
+    margin: 3px;
+}
