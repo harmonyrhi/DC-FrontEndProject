@@ -1,0 +1,111 @@
+.weather-box{
+    width: 1200px !important;
+    height: 500px !important;
+   
+    margin-top: 10%;
+}
+
+p{
+    color: aqua;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("WeatherBackground.jpeg") no-repeat center center fixed;
+  background-size: 70em;
+}
+
+.weather-box {
+    display: grid;
+    grid-template-columns: 750px 1fr ;
+  
+    background: url("inner-back.png") no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    background-size: 75em;
+  /* width: 300px;
+  height: 300px; */
+}
+
+.CurrentWeather{
+    border: 2px solid blue;
+}
+
+.img-box{
+    background-color: black;
+    margin: 100px 100px 0px;
+    height: 200px;
+}
+
+.City-temputure{
+    display: flex;
+    justify-content: center;
+    margin-top: 46%;
+}
+
+.City-temputure div{
+    display: block;
+    justify-content: center;
+}
+
+.CurrentDegrees{
+    color: white;
+    margin-right: 20px ;
+    font-size: 4em;
+}
+
+.Current-city-time div{
+   
+display: block;
+}
+
+
+
+
+.time-date{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+}
+.time-date div{
+
+}
+
+.CurrentDegrees{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+#Attributes{
+   background-color: rgb(8, 8, 8, 0.5 );
+   
+}
+
+#Attributes p{
+  color: white;
+  
+ }
+
+
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .weather-box {
+        display: block;
+        
+    }
+    
+
+    .Attributes{
+        height: 20em;
+    }
+
+}
