@@ -1,0 +1,15 @@
+// IMAGES FOR WEATHER APP
+
+Cloudy and Gray
+https://pixabay.com/photos/cloudy-rain-white-clouds-nature-2680190/
+
+Blue Sky and Clouds
+https://pixabay.com/photos/clouds-blue-sky-cloudy-sky-cumulus-4258726/
+
+Raindrops
+https://pixabay.com/photos/surface-rain-drops-raindrops-455124/
+
+Snowy Landscape
+https://pixabay.com/photos/snow-trees-bank-snowfield-frosty-5910822/
+
+
