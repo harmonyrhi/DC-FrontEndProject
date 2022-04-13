@@ -19,7 +19,7 @@ body{
     display: grid;
     grid-template-columns: 750px 1fr ;
   
-    background: url(https://pixabay.com/get/g34e733be66bdf61cac4bd62db3398fc13f77c93785758cc18a4250150a1eef5cd25cb24836154dd04a691c0906cfce28.png) no-repeat center center fixed; 
+    background: url(inn) no-repeat center center fixed; 
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
