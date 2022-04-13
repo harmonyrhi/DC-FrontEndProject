@@ -13,17 +13,17 @@
  * */
 
 const app = {
-    init: () => {
-        window
-            .onload(app.fetchWeather),
-        window
-            .onload(app.getLocation)
+    // init: () => {
+    //     window
+    //         .onload(app.fetchWeather),
+    //     window
+    //         .onload(app.getLocation)
         //     .getElementById('btnGet')/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
         //     .addEventListener('click' , app.fetchWeather);
         // document
         //     .getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
         //     .addEventListener('click' , app.getLocation);
-    },
+    // },
     fetchWeather: (ev) => {
         //use the values from latitude and longitude to fetch the weather from JS 
         let lat = "42.98";
@@ -59,7 +59,7 @@ const app = {
         document.getElementById('longitude').value = 
             position.coords.longitude.toFixed(2);
     },
-    wtf: (err) => {
+    wtf: (error) => {
         console.log('there was an error')
     },
     showWeather: (Response) => {
@@ -109,7 +109,7 @@ const app = {
     },
 };
 
-let test = document.getElementById('harmony').innerHTML= "lets do it";
+let test = document.getElementById('container').innerHTML= "lets do it";
 
 app.init() // starts weather app
 
