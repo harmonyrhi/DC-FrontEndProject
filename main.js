@@ -34,9 +34,9 @@ const app = {
         let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
         //fetches weather information, the variables attached to the end of the URL 
         fetch(url) 
-            .then((Response) => {
-                if (!Response.ok) throw new Error(Response.statusText)
-                return Response.json;
+            .then((response) => {
+                if (!response.ok) throw new Error(response.statusText)
+                return response.json();
             })
             .then((data) => {
                 app.showWeather(data);
@@ -118,4 +118,3 @@ app.init() // starts weather app
 
 
 
-//PUSHING WHAT I HAVE SO FAR, NOT FINISHED YET
