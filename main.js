@@ -123,6 +123,7 @@ const app =  {
       }&deg;</p>
               <p class="card-text">Sunrise ${sr}</p>
               <p class="card-text">Sunset ${ss}</p>
+
             </div>
           </div>
         </div>
