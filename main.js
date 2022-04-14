@@ -91,7 +91,7 @@ const app =  {
       //clear out old weather data and add new 
       //row.innerHTML = ''; //row.innerHTML clears out current HTML replaces it with data from api
       row.innerHTML = Response.daily.map((day, index) => {
-          if (index <= 2) {  // the index of 2 will print as a 3 day report, this can be changed for any static date span up to 7 days
+          if (index <= 0) {  // the index of 2 will print as a 3 day report, this can be changed for any static date span up to 7 days
               let dt = new Date(day.dt * 1000); //timestamp * 1000
               let sr = new Date(day.sunrise * 1000).toTimeString();
               let ss = new Date(day.sunset * 1000).toTimeString();
