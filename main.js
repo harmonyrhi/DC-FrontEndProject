@@ -36,14 +36,14 @@ const app =  {
   init: () => {
       // Document
       //      .onload(app.fetchWeather),
-          document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
+          // document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
           // document.addEventListener('click' , app.getLocation);
           //.onload(app.getLocation)
-          document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
+          // document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
           // document.addEventListener('click' , app.fetchWeather);
-          document.addEventListener('click' , app.fetchWeather);
-
-          
+          // document.addEventListener('click' , app.fetchWeather);
+          app.getLocation();
+          app.fetchWeather();
   },
   fetchWeather: (ev) => { console.log('test');
       //use the values from latitude and longitude to fetch the weather from JS 
