@@ -34,14 +34,6 @@
 
 const app =  {
   init: () => {
-      // Document
-      //      .onload(app.fetchWeather),
-          // document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
-          // document.addEventListener('click' , app.getLocation);
-          //.onload(app.getLocation)
-          // document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
-          // document.addEventListener('click' , app.fetchWeather);
-          // document.addEventListener('click' , app.fetchWeather);
           app.getLocation();
           app.fetchWeather();
   },
@@ -76,9 +68,9 @@ const app =  {
   },
   ftw: (position) => {
       //position aquired
-      document.getElementById('latitude').value = 
+      var lat = 
           position.coords.latitude.toFixed(2);
-      document.getElementById('longitude').value = 
+      var lon = 
           position.coords.longitude.toFixed(2);
   },
   wtf: (err) => {
@@ -107,13 +99,10 @@ const app =  {
             />
             <div class="card-body">
               <h3 class="card-title">${day.weather[0].main}</h3>
-              <p class="card-text">High ${day.temp.max}&deg;C Low ${
-        day.temp.min
-      }&deg;C</p>
+              <p class="card-text">High ${day.temp.max}&deg; F Low ${day.temp.min}&deg; F</p>
               <p class="card-text">High Feels like ${
-                day.feels_like.day
-              }&deg;C</p>
-              <p class="card-text">Pressure ${day.pressure}mb</p>
+day.feels_like.day}&deg; F</p>
+              <p class="card-text">Pressure ${day.pressure} mb</p>
               <p class="card-text">Humidity ${day.humidity}%</p>
               <p class="card-text">UV Index ${day.uvi}</p>
               <p class="card-text">Precipitation ${day.pop * 100}%</p>
