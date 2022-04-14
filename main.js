@@ -12,34 +12,55 @@
  * which is pre-loaded into the weather API no additional integtration 
  * */
 
-const app = {
-    // init: () => {
-    //     window
-    //         .onload(app.fetchWeather),
-    //     window
-    //         .onload(app.getLocation)
-        //     .getElementById('btnGet')/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
-        //     .addEventListener('click' , app.fetchWeather);
-        // document
-        //     .getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
-        //     .addEventListener('click' , app.getLocation);
-    // },
-    fetchWeather: (ev) => {
+// showReturn = injectConstructor => {
+//   const weatherDiv = document.querySelector(`#container`)
+//     injectConstructor.array.forEach(element => {
+//       const creatorElenment = document.createElement('div');
+//       creatorElement.innerText =
+
+      
+//     });
+
+//     showCharacters = injectConstructor => {
+//       const weatherDiv = document.querySelector('#container');
+//       injectConstructor.forEach(sunrise => {
+//         const characterElement = document.createElement('p');
+//         characterElement.innerText = sunrise;
+//         weatherDiv.append(characterElement);
+//       });
+//     }
+// }
+
+
+const app =  {
+    init: () => {
+        // Document
+        //      .onload(app.fetchWeather),
+        
+            //  .onload(app.getLocation)
+            document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
+            document.addEventListener('click' , app.fetchWeather);
+        
+            document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
+            document.addEventListener('click' , app.getLocation);
+    },
+    fetchWeather: (ev) => { console.log('test');
         //use the values from latitude and longitude to fetch the weather from JS 
-        let lat = "42.98";
-        let lon = "-81.23";
+        let lat = "33.7490";
+        let lon = "84.3880";
         let key = '8386a687f2f5376a7e8ca545f6bbc2a7';
         let lang = 'en'; 
-        let units = 'imperial'; // could use Standard(Kelvin), Metric, or Imperial
+        let units = 'metric'; // could use Standard(Kelvin), Metric, or Imperial
         let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
         //fetches weather information, the variables attached to the end of the URL 
         fetch(url) 
-            .then((Response) => {
-                if (!Response.ok) throw new Error(Response.statusText)
-                return Response.json;
+        .then((Response) => {
+          if (!Response.ok) throw new Error(Response.statusText)
+          return Response.json();
             })
             .then((data) => {
                 app.showWeather(data);
+                console.log(data);
             })
             .catch(console.error) // "console.err" logs the error internally, return displays it but kills the program
         
@@ -59,7 +80,8 @@ const app = {
         document.getElementById('longitude').value = 
             position.coords.longitude.toFixed(2);
     },
-    wtf: (error) => {
+    wtf: (err) => {
+        console.error(Error)
         console.log('there was an error')
     },
     showWeather: (Response) => {
@@ -74,13 +96,13 @@ const app = {
                 let ss = new Date(day.sunset * 1000).toTimeString();
             return `<div class="col">
             <div class="card">
-            <h5 class="card-title p-2">${dt.toDateString()}</h5> // .toDateString converts current Day/Time to a string
+            <h5 class="card-title p-2">${dt.toDateString()}</h5>
               <img
                 src="http://openweathermap.org/img/wn/${
-                  day.weather[0].icon // weather is an array in the JSON file
+                  day.weather[0].icon
                 }@4x.png"
                 class="card-img-top"
-                alt="${day.weather[0].description}" // alt text for image
+                alt="${day.weather[0].description}"
               />
               <div class="card-body">
                 <h3 class="card-title">${day.weather[0].main}</h3>
@@ -98,8 +120,8 @@ const app = {
                 <p class="card-text">Wind ${day.wind_speed}m/s, ${
           day.wind_deg
         }&deg;</p>
-                <p class="card-text">Sunrise ${sr}</p> // sunrise
-                <p class="card-text">Sunset ${ss}</p> // sunset
+                <p class="card-text">Sunrise ${sr}</p>
+                <p class="card-text">Sunset ${ss}</p>
               </div>
             </div>
           </div>
@@ -109,13 +131,11 @@ const app = {
     },
 };
 
-let test = document.getElementById('container').innerHTML= "lets do it";
-
+// let test = document.getElementById('pressure').innerHTML = "LETS GOOOOOOO";
 app.init() // starts weather app
 
 // const pageLoad = document.getElementByClass('.weather.row') 
 // inner
 
+//ERRORS have been debugged, script is displaying on the HTML now!
 
-
-//PUSHING WHAT I HAVE SO FAR, NOT FINISHED YET
