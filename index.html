@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <title>Weather APP</title>
 </head>
 <body>
@@ -18,15 +19,12 @@
                 <div class="CurrentDegrees"> 86° </div>
                 
                 <div class="Current-city-time">
-                 <div class="CurrentCity"> Atlanta</div>
-                 
-                 <div class="time-date"> 
-                    <div class="Current-time"> 10:30am</div>
-                    <div class="Current-date">20 April 22</div>
-
-                    <div class="latitude" id="latitude">latitude</div>
-                    <div class="longitude" id="longiude">longitude</div>
-
+                    <div class="CurrentCity"> Atlanta</div>
+                    
+                    <div class="time-date"> 
+                        <div class="Current-time"> 10:30am</div>
+                        <div class="Current-date">20 April 22</div>
+                    </div>
 
 
                 </div>
@@ -39,7 +37,7 @@
 
         </div>
         
-        <div id="Attributes">
+        <div onload="main.js" id="Attributes">
             <p> homess</p>
             <main id="container" class="container">  <!-- this is the container for all the weather data to populate from API-->
               <h2>Weather</h2>
@@ -77,5 +75,6 @@
 
 
 </body>
-
+<script src="main.js"></script>
+</html>
 

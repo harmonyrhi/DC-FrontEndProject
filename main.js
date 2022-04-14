@@ -37,11 +37,12 @@ const app =  {
         // Document
         //      .onload(app.fetchWeather),
             document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
-            document.addEventListener('click' , app.getLocation);
-            //  .onload(app.getLocation)
+            // document.addEventListener('click' , app.getLocation);
+            //.onload(app.getLocation)
             document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
+            // document.addEventListener('click' , app.fetchWeather);
             document.addEventListener('click' , app.fetchWeather);
-        
+
             
     },
     fetchWeather: (ev) => { console.log('test');
@@ -137,5 +138,8 @@ app.init() // starts weather app
 // const pageLoad = document.getElementByClass('.weather.row') 
 // inner
 
-//ERRORS have been debugged, script is displaying on the HTML now!
+//ERRORS have been debugged, script is displaying on the HTML now
 
+/**  added onLoad method to load the API when the page is opened rather than the previous method
+*    which required a page click. Next step is designating where the desired information populates.
+*/
