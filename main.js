@@ -30,7 +30,7 @@ const app = {
         let lon = "-81.23";
         let key = '8386a687f2f5376a7e8ca545f6bbc2a7';
         let lang = 'en'; 
-        let units = 'imperial'; // could use Standard(Kelvin), Metric, or Imperial
+        let units = 'metric'; // could use Standard(Kelvin), Metric, or Imperial
         let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
         //fetches weather information, the variables attached to the end of the URL 
         fetch(url) 
@@ -62,12 +62,12 @@ const app = {
     wtf: (error) => {
         console.log('there was an error')
     },
-    showWeather: (Response) => {
-        console.log(Response)
+    showWeather: (response) => {
+        console.log(response)
         let row = document.querySelector('.weather.row') //.weather.row is the dummy "div class" info just to build the app, replace with dif class info where div will be placed
         //clear out old weather data and add new 
         //row.innerHTML = ''; //row.innerHTML clears out current HTML replaces it with data from api
-        row.innerHTML = Response.daily.map((day, index) => {
+        row.innerHTML = response.daily.map((day, index) => {
             if (index <= 2) {  // the index of 2 will print as a 3 day report, this can be changed for any static date span up to 7 days
                 let dt = new Date(day.dt * 1000); //timestamp * 1000
                 let sr = new Date(day.sunrise * 1000).toTimeString();
