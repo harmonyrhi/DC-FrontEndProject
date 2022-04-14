@@ -36,13 +36,13 @@ const app =  {
     init: () => {
         // Document
         //      .onload(app.fetchWeather),
-        
+            document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
+            document.addEventListener('click' , app.getLocation);
             //  .onload(app.getLocation)
             document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
             document.addEventListener('click' , app.fetchWeather);
         
-            document.getElementById('btnCurrent')/**INSERT *ID TAG* FOR CURRENT WEATHER*/
-            document.addEventListener('click' , app.getLocation);
+            
     },
     fetchWeather: (ev) => { console.log('test');
         //use the values from latitude and longitude to fetch the weather from JS 
@@ -50,7 +50,7 @@ const app =  {
         let lon = "84.3880";
         let key = '8386a687f2f5376a7e8ca545f6bbc2a7';
         let lang = 'en'; 
-        let units = 'metric'; // could use Standard(Kelvin), Metric, or Imperial
+        let units = 'imperial'; // could use Standard(Kelvin), Metric, or Imperial
         let url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
         //fetches weather information, the variables attached to the end of the URL 
         fetch(url) 
