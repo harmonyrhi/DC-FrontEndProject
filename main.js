@@ -31,6 +31,9 @@
 //     }
 // }
 
+
+
+
 const app =  {
   init: () => {
       // Document
@@ -80,10 +83,12 @@ const app =  {
       document.getElementById('longitude').value = 
           position.coords.longitude.toFixed(2);
   },
+  
   wtf: (err) => {
       console.error(Error)
       console.log('there was an error')
   },
+ 
   showWeather: (Response) => {
       console.log(Response)
       let row = document.querySelector('.weather.row') //.weather.row is the dummy "div class" info just to build the app, replace with dif class info where div will be placed
@@ -106,20 +111,18 @@ const app =  {
             />
             <div class="card-body">
               <h3 class="card-title">${day.weather[0].main}</h3>
-              <p class="card-text">High ${day.temp.max}&deg;C Low ${
+              <p class="card-text">High ${day.temp.max}&deg;F Low ${
         day.temp.min
-      }&deg;C</p>
+      }&deg;F</p>
               <p class="card-text">High Feels like ${
                 day.feels_like.day
-              }&deg;C</p>
+              }&deg;F</p>
               <p class="card-text">Pressure ${day.pressure}mb</p>
               <p class="card-text">Humidity ${day.humidity}%</p>
               <p class="card-text">UV Index ${day.uvi}</p>
               <p class="card-text">Precipitation ${day.pop * 100}%</p>
               <p class="card-text">Dewpoint ${day.dew_point}</p>
-              <p class="card-text">Wind ${day.wind_speed}m/s, ${
-        day.wind_deg
-      }&deg;</p>
+              <p class="card-text">Wind ${day.wind_speed}m/s, ${day.wind_deg}&deg;</p>
               <p class="card-text">Sunrise ${sr}</p>
               <p class="card-text">Sunset ${ss}</p>
             </div>
@@ -134,6 +137,8 @@ const app =  {
 // let test = document.getElementById('pressure').innerHTML = "LETS GOOOOOOO";
 app.init() // starts weather app
 
+
+document.getElementById('')
 // const pageLoad = document.getElementByClass('.weather.row') 
 // inner
 
@@ -142,3 +147,4 @@ app.init() // starts weather app
 /**  added onLoad method to load the API when the page is opened rather than the previous method
 *    which required a page click. Next step is designating where the desired information populates.
 */
+

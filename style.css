@@ -1,8 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+body{
+ background: linear-gradient(
+     to right, #E3F3C4,
+      #3AADC3, #225EA8);
+      background-size: 400% 400%;
+      animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
 .weather-box{
     width: 1200px !important;
     height: 500px !important;
-   
     margin-top: 10%;
+    border: 5px solid white;
 }
 
 p{
@@ -13,13 +35,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .weather-box {
     display: grid;
     grid-template-columns: 750px 1fr ;
   
-    background: url(https://pixabay.com/get/g34e733be66bdf61cac4bd62db3398fc13f77c93785758cc18a4250150a1eef5cd25cb24836154dd04a691c0906cfce28.png) no-repeat center center fixed; 
+    background: url(inner-back.png) no-repeat center center fixed; 
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -30,7 +53,7 @@ body{
 }
 
 .CurrentWeather{
-    border: 2px solid blue;
+    
 }
 
 .img-box{
@@ -42,7 +65,8 @@ body{
 .City-temputure{
     display: flex;
     justify-content: center;
-    margin-top: 46%;
+    margin-top: 40%;
+    font-family: 'Nunito', sans-serif;
 }
 
 .City-temputure div{
@@ -53,12 +77,28 @@ body{
 .CurrentDegrees{
     color: white;
     margin-right: 20px ;
-    font-size: 4em;
+    font-size: 7em;
+}
+
+.Current-city-time{
+    margin-top: 22px;
 }
 
 .Current-city-time div{
-   
-display: block;
+display: flex;
+justify-content: space-around;
+color: white;
+}
+
+.CurrentCity{
+    font-size: 4em;
+    
+}
+
+.Weather-Icon{
+    font-size: 2em;
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 
@@ -73,9 +113,8 @@ display: block;
 
 }
 
-.CurrentDegrees{
 
-}
+
 
 #Attributes{
    background-color: rgb(8, 8, 8, 0.5 );
@@ -95,14 +134,101 @@ display: block;
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+    body{
+        background: linear-gradient(
+            to right, #E3F3C4,
+             #3AADC3, #225EA8);
+             background-size: 400% 400%;
+             animation: animate-background 10s infinite ease-in-out;
+       }
+       
+       @keyframes animate-background{
+           0%{
+               background-position: 0 50%;
+           }
+           50%{
+               background-position: 100% 50%;
+           }
+           100%{
+               background-position: 0 50%;
+           }
+       }
+
     .weather-box {
         display: block;
+        width: 100% !important;
         
     }
+
+    .Weather-Icon{
+        margin-left: 10px;
+    }
+
+    .City-temputure{
+        display: flex;
+        justify-content: center;
+        margin-top: 40%;
+        margin-bottom: 10%;
+    }
+
+
+
+    .CurrentDegrees {
+        color: white;
+        margin-right: 8px;
+        font-size: 43px;
+        margin-top: 1em;
+    }
+
+    .CurrentCity{
+        font-size: 33px;
+    }
+
+    .Current-city-time div{
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        
+        }
+
+        .Current-city-time{
+            margin-top: 39px;
+        }
+
+
+        .time-date{
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+            justify-content: space-around;
+        }
+
+        .Current-date{
+            margin-left: 6px;
+        }
+
+
+    #logoBoxContainer{
+        display: flex;
+        margin-left: 60px;
+    }
+    
     
 
-    .Attributes{
-        height: 20em;
+    #Attributes{
+        height: 241px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
