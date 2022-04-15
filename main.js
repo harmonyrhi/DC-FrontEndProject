@@ -43,7 +43,7 @@ const app =  {
           //.onload(app.getLocation)
           document.getElementById('btnGet'),/**INSERT *ID TAG* FOR GET WEATHER FORECAST FEATURE*/
           // document.addEventListener('click' , app.fetchWeather);
-          document.addEventListener('click' , app.fetchWeather);
+          window.addEventListener('load' , app.fetchWeather);
 
           
   },
