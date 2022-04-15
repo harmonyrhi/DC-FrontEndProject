@@ -31,7 +31,6 @@
 //     }
 // }
 
-
 const app =  {
   init: () => {
       // Document
