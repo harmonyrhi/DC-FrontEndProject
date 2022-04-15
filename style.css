@@ -35,14 +35,15 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background: url("WeatherBackground.jpeg") no-repeat center center fixed;
+  background-size: 70em;
+
 }
 
 .weather-box {
     display: grid;
     grid-template-columns: 750px 1fr ;
-  
-    background: url(inner-back.png) no-repeat center center fixed; 
+    background: url("inner-back.png") no-repeat center center fixed; 
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -113,6 +114,9 @@ color: white;
 
 }
 
+.CurrentDegrees{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 
 
