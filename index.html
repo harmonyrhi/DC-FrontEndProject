@@ -32,6 +32,10 @@
                     <div class="time-date"> 
                         <div id="currentTime" class="Current-time"></div>
                         <div id="currentDate" class="Current-date"></div>
+                        <div id="latitude" class="latitude"></div>
+                        <div id="longitude" class="longitude"></div>
+                        <div id="locationData" class="locationData"></div>
+
                     </div>
 
                 </div>
@@ -50,7 +54,7 @@
 
         </div>
         
-        <div onload="main.js" id="Attributes">
+        <div onload="main.js" id="Attributes" >
             <p> homess</p>
             <main id="container" class="container">  <!-- this is the container for all the weather data to populate from API-->
               <h2>Weather</h2>
@@ -93,6 +97,7 @@
 
 <script src="main.js"></script>
 <script src="logoinject.js"></script>
+<script src="navi.js"></script>
 <script>
   document.getElementById("currentDate").innerHTML = Date();
   </script>
@@ -109,4 +114,5 @@
       document.getElementById("currentDate").innerHTML = dayTemp;
 
       </script>
+
 </html>

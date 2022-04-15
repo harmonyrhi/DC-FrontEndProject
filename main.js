@@ -49,8 +49,8 @@ const app =  {
   },
   fetchWeather: (ev) => { console.log('test');
       //use the values from latitude and longitude to fetch the weather from JS 
-      let lat = "33.7490";
-      let lon = "84.3880";
+      let lat = 33.7490;
+      let lon = -84.3880;
       let key = '8386a687f2f5376a7e8ca545f6bbc2a7';
       let lang = 'en'; 
       let units = 'imperial'; // could use Standard(Kelvin), Metric, or Imperial
@@ -138,7 +138,14 @@ const app =  {
 app.init() // starts weather app
 
 
-document.getElementById('')
+document.getElementById()
+
+//let locaData = document.querySelector('.locationData')
+//locaData.innerHTML = getLocation()
+
+console.log(getLocation ())
+
+
 // const pageLoad = document.getElementByClass('.weather.row') 
 // inner
 
